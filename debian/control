@@ -1,0 +1,21 @@
+Source: ebtables
+Section: net
+Priority: optional
+Maintainer: Debian Netfilter Packaging Team <pkg-netfilter-team@lists.alioth.debian.org>
+Uploaders: Alberto Molina Coballes <alb.molina@gmail.com>
+Standards-Version: 4.5.0
+Build-Depends: debhelper-compat (= 13)
+Rules-Requires-Root: no
+Homepage: https://netfilter.org/
+Vcs-Git: https://salsa.debian.org/pkg-netfilter-team/pkg-ebtables.git
+Vcs-Browser: https://salsa.debian.org/pkg-netfilter-team/pkg-ebtables
+
+Package: ebtables
+Architecture: linux-any
+Multi-Arch: foreign
+Depends: netbase (>= 6.0), ${shlibs:Depends}, ${misc:Depends}
+Recommends: iptables, kmod
+Description: Ethernet bridge frame table administration
+ Ebtables is used to set up, maintain, and inspect the tables of
+ Ethernet frame rules in the Linux kernel. It is analogous to iptables,
+ but operates at the MAC layer rather than the IP layer.

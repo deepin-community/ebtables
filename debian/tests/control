@@ -1,0 +1,11 @@
+Test-Command: ebtables-legacy -h
+Depends: @
+Restrictions: needs-root
+
+Test-Command: ebtables-legacy-save
+Depends: @
+Restrictions: needs-root, isolation-container
+
+Test-Command: ebtablesu -h
+Depends: @
+Restrictions: needs-root

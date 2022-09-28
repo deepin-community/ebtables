@@ -1,0 +1,27 @@
+Description: Makefile.am patch
+Adjust the installation paths to Debian-compatible values
+From: Alberto Molina Coballes <alb.molina@gmail.com>
+
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -5,9 +5,10 @@
+ PROGNAME = ${PACKAGE_NAME}
+ PROGVERSION = ${PACKAGE_VERSION}
+ PROGDATE = December\ 2011
+-INITDIR = /etc/rc.d/init.d
++INITDIR = /etc/init.d
+ initddir = ${INITDIR}
+-sysconfigdir = ${sysconfdir}/sysconfig
++sysconfigdir = /etc/default
++sbindir = /usr/sbin
+ EBTD_CMDLINE_MAXLN = 2048
+ EBTD_ARGC_MAX = 50
+ PIPE_DIR = /tmp/${PACKAGE_NAME}-v${PROGVERSION}
+@@ -26,7 +27,6 @@
+ 
+ sbin_PROGRAMS = ebtables-legacy ebtablesd ebtablesu ebtables-legacy-restore
+ EXTRA_PROGRAMS = static examples/ulog/test_ulog
+-sysconf_DATA = ethertypes
+ sbin_SCRIPTS = ebtables-legacy-save
+ man8_MANS = ebtables-legacy.8
+ lib_LTLIBRARIES = libebtc.la

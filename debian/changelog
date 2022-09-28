@@ -1,0 +1,345 @@
+ebtables (2.0.11-4) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * [dd00d30] debian/copyright: use spaces rather than tabs to start
+    continuation lines.
+  * [0d18442] Use canonical URL in Vcs-Browser.
+  * [5f86090] Fix day-of-week for changelog entry 2.0.10.4-2.
+  * [5f0000d] Update standards version to 4.5.0, no changes needed.
+
+  [ Alberto Molina Coballes ]
+  * [c4a3f15] d/: add basic autopkgtests
+  * [ea72fad] ebtables: bump debhelper-compat to 13
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Fri, 05 Jun 2020 14:40:39 +0000
+
+ebtables (2.0.11-3) unstable; urgency=medium
+
+  * [5f984fe] d/control: add dependency upon netbase
+  * [69c66a6] d/control: bump to debhelper-compat
+  * [bcf3a58] d/control: Set 'Rules-Requires-Root: no'
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Wed, 01 Jan 2020 20:16:29 +0000
+
+ebtables (2.0.11-2) unstable; urgency=medium
+
+  * [ad3fd35] d/patches: refresh makefile.patch
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Thu, 19 Dec 2019 17:33:21 +0000
+
+ebtables (2.0.11-1) unstable; urgency=medium
+
+  * [7d9e79f] d/watch: update upstream url regexp
+  * [4a2982c] New upstream version 2.0.11
+  * [7d0f7db] d/control: bump std-version to 4.4.1
+  * [059b40c] d/patches: upgrade patches to new upstream release
+  * [2213ace] d/patches correct wrong sbindir in makefile.patch
+  * [1c5080d] d/rules: override dh_makeshlibs
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Fri, 06 Dec 2019 19:26:15 +0000
+
+ebtables (2.0.10.4+snapshot20181205-3) unstable; urgency=medium
+
+  [ Arturo Borrero Gonzalez ]
+  * [9b474c7] src:ebtables: add salsa CI integration
+
+  [ Alberto Molina Coballes ]
+  * [5dbd22d] Remove /sbin symlinks on not usr-merged systems (Closes: #926728)
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Mon, 15 Apr 2019 18:23:43 +0000
+
+ebtables (2.0.10.4+snapshot20181205-2) unstable; urgency=medium
+
+  [ Alberto Molina Coballes ]
+  * [d0a79d0] d/rules: include build architecture compiler (Closes: #848948)
+  * [322fbda] Revert "d/rules: include build architecture compiler"
+  * [25138b7] d/ebtables.prerm: iptables verification deleted (Closes: #919583)
+  * [22208c6] d/control: Mark ebtables as 'Multi-Arch: foreign'
+    (Closes: #918787)
+  * [b739b36] d/ebtables-{save,restore}.8 renamed
+
+  [ Arturo Borrero Gonzalez ]
+  * [a9cfc27] d/rules: make build verbose
+  * [5e3d23f] d/stamp-autotools-files: delete file
+
+  [ Alberto Molina Coballes ]
+  * [7a58bd0] ebtables: System V init script removed (Closes: #918678)
+  * [9d015e9] ebtables: remove, disable and purge systemvinit script and
+    systemd service
+  * [1292475] d/README.Debian: add explanation about nftables migration
+  * [de05c5e] d/patches: minor update
+  * [b4d4f1e] d/control: bump std-version to 4.3.0
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Sat, 02 Feb 2019 19:31:28 +0000
+
+ebtables (2.0.10.4+snapshot20181205-1) unstable; urgency=medium
+
+  * [6222d5e] New upstream version 2.0.10.4+snapshot20181205
+  * [e8625b3] Adapt debian patches to the latest upstream version
+  * [02842b0] ebtables: introduce /sbin compatibility symlinks
+  * [1927aad] ebtables: introduce alternatives for /usr/sbin/ebtables
+    (Closes: #912046)
+  * [b649957] d/patches ebtables libraries in a specific directory
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Tue, 01 Jan 2019 12:21:45 +0000
+
+ebtables (2.0.10.4-5) unstable; urgency=medium
+
+  * [3681e23] d/patches: Add dpkg-buildflags
+  * [2663aba] d/patches: Modify makefile allowing parallel build
+    (Closes: #897592)
+  * [e30fe91] manpages: Add ebtables-save.8 and ebtables-restore.8
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Wed, 09 May 2018 15:58:13 +0000
+
+ebtables (2.0.10.4-4) unstable; urgency=medium
+
+  [ Alberto Molina Coballes ]
+  * [bf201c6] d/control: Updating maintainers and adding uploaders
+    (Closes: #891769)
+  * [0f4ede2] d/control: Updating Standards-Version to 4.1.3
+  * [3ce5061] d/control: Adding VCS-* headers
+  * [481b022] d/control: Updating homepage
+  * [16740e9] d/watch: Updating url
+  * [6d94fde] d/control: Updating debhelper to 11
+  * [ea71db8] d/compat: Updating to 11
+  * [a80dc56] d/copyright: Updating according to DEP-5
+
+  [ Arturo Borrero Gonzalez ]
+  * [1b1ac15] d/rules: use debhelper rather than cdbs
+  * [dd20bc3] d/patches: add compilation_warning.patch
+
+  [ Alberto Molina Coballes ]
+  * [1aa6f5d] d/patches: set LIBDIR to /lib/ebtables
+  * [01096e7] d/control: delete dh-systemd (>= 1.5) as build-dependence
+  * [9232eca] d/patches: add -g to produce debugging information
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Thu, 26 Apr 2018 09:12:22 +0000
+
+ebtables (2.0.10.4-3.5) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add native systemd unit file ebtables.service (Closes: #796602)
+    - this is basically just a wrapper around the init script.
+  * Add dh-systemd (>= 1.5) build dependency for the above.
+    - accompanying cdbs versioned dependency was already new enough.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 25 May 2016 20:34:14 +0200
+
+ebtables (2.0.10.4-3.4) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/ebtables.postinst: Check if /var/lib/ebtables exists before trying
+    to delete it (Closes: #813889)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 07 Feb 2016 21:46:31 +0100
+
+ebtables (2.0.10.4-3.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Switch the postrm script from /bin/bash to /bin/sh
+
+ -- Laurent Bigonville <bigon@debian.org>  Fri, 05 Feb 2016 13:53:20 +0100
+
+ebtables (2.0.10.4-3.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/patches/lockdirfix.patch: Move the lock file to /run instead of
+    /var/lib/ebtables directory (Closes: #813760)
+  * debian/ebtables.postinst: Remove /var/lib/ebtables during upgrade, that
+    directory was created by ebtables but not tracked by the package.
+
+ -- Laurent Bigonville <bigon@debian.org>  Fri, 05 Feb 2016 13:29:39 +0100
+
+ebtables (2.0.10.4-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Use arch:linux-any instead of arch:any (Closes: #745165)
+  * Ship ebtables-restore and ebtables-save during build (Closes: #813752)
+  * Bump Standards-Version to 3.9.6 (no further changes)
+  * Drop obsolete hardening-wrapper and use dpkg-buildflags instead. Also pass
+    all the *FLAGS to the Makefile so we are sure they are used.
+  * Drop debian/ebtables.override: All the overrides are not needed anymore.
+
+ -- Laurent Bigonville <bigon@debian.org>  Fri, 05 Feb 2016 02:11:19 +0100
+
+ebtables (2.0.10.4-3) unstable; urgency=low
+
+  * packaging update:
+    - fix missing dot in DEB_DH_INSTALLINIT_ARGS (Closes: #706885)
+
+ -- William Dauchy <wdauchy@gmail.com>  Mon, 06 May 2013 14:06:02 +0000
+
+ebtables (2.0.10.4-2) unstable; urgency=low
+
+  * packaging update:
+    - add install init args in rules to fix install warning (Closes: #697275)
+    - module-init-tools is a transitional package. replacing it with kmod
+    (Closes: #697276)
+    - "init script returns 1 when ebtables is removed" (Closes: #684592)
+
+ -- William Dauchy <wdauchy@gmail.com>  Wed, 20 Mar 2013 15:46:02 +0000
+
+ebtables (2.0.10.4-1) unstable; urgency=low
+
+  * New upstream release
+    - "v2.0.10-1 wish for ipv6-icmp and security" (Closes: #643594).
+  * packaging update:
+    * use debhelper & compat version 9.
+    * standards to 3.9.3
+    - "ebtables may use modprobe, so it should recommend module-init-tools"
+      (Closes: #614919)
+    * missing cdbs build dependency
+    * add hardening to debian rules.
+    * init: add run level 1 to Default-Stop rule
+  * patchworks:
+    + refresh patches with new release
+    + refresh patch headers
+  * Adding myself as uploaders
+  * Removing Jan Christoph Nordholz from uploaders
+
+ -- William Dauchy <wdauchy@gmail.com>  Thu, 24 May 2012 12:24:02 +0000
+
+ebtables (2.0.9.2-2.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Fix FTBFS due to missing __aligned_u64 definition (Closes: #661449):
+    - 04compensate-for-missing-aligned-u64.patch
+  * Set urgency to “high” for RC bug fix.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 03 Mar 2012 15:24:02 +0000
+
+ebtables (2.0.9.2-2) unstable; urgency=low
+
+  * Add a lintian override concerning the usage of -rpath that got lost
+    in the last revision.
+
+ -- Jochen Friedrich <jochen@scram.de>  Mon, 10 May 2010 14:08:01 +0200
+
+ebtables (2.0.9.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Refresh patches
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Bump Standards version to 3.8.4
+  * Added homepage tag
+
+ -- Jochen Friedrich <jochen@scram.de>  Fri, 07 May 2010 16:50:04 +0200
+
+ebtables (2.0.9.1-1) unstable; urgency=low
+
+  * New upstream release:
+    * New modules for ip6 and nflog.
+  * Bump Standards version to 3.8.2:
+    * Catch postrm errors.
+    * Specify GPL version and cleanup copyright file.
+  * Bump debhelper level to 7.
+
+ -- Jan Christoph Nordholz <hesso@pool.math.tu-berlin.de>  Sun, 28 Jun 2009 20:01:25 +0200
+
+ebtables (2.0.8.2-4) unstable; urgency=low
+
+  * Don't have the initscript probe for kernel support if it is not going
+    to actually do something. Thanks to Patrick McHardy for report and patch!
+    Closes: #476429.
+  * While I'm at it, make a few minor (unrelated) improvements to the
+    initscript.
+
+ -- Jan Christoph Nordholz <hesso@pool.math.tu-berlin.de>  Sun, 20 Apr 2008 00:56:39 +0200
+
+ebtables (2.0.8.2-3) unstable; urgency=low
+
+  * Fix NAME section in ebtables(8) manpage.
+
+ -- Jan Christoph Nordholz <hesso@pool.math.tu-berlin.de>  Fri, 11 Apr 2008 01:48:33 +0200
+
+ebtables (2.0.8.2-2) unstable; urgency=low
+
+  * Replace call to $(LD) with $(CC) to fix FTBFS on hppa.
+
+ -- Jan Christoph Nordholz <hesso@pool.math.tu-berlin.de>  Sun, 04 Nov 2007 14:38:12 +0100
+
+ebtables (2.0.8.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Replace dpatches 10-12 with new 02makefile_adjustments
+    as upstream has incorporated most of our changes.
+
+ -- Jan Christoph Nordholz <hesso@pool.math.tu-berlin.de>  Sun, 23 Sep 2007 15:28:36 +0200
+
+ebtables (2.0.8.1-2) unstable; urgency=low
+
+  * Thoroughly clean up the installation logic of upstream's
+    Makefile. Closes: #431345.
+
+ -- Jan Christoph Nordholz <hesso@pool.math.tu-berlin.de>  Mon, 02 Jul 2007 23:05:34 +0200
+
+ebtables (2.0.8.1-1) unstable; urgency=low
+
+  * New upstream release. Closes: #428924, #403674.
+    (428924: FTBFS with linux-libc-dev)
+    (403674: wishlist bug: new upstream available)
+  * Bump Standards version to 3.7.2.
+  * Replace debhelper+cdbs with debhelper+dpatch (personal
+    preference).
+  * Write a debian-specific initscript. The upstream one is
+    too closely tied to redhat.
+  * Add a lintian override concerning the usage of -rpath for the
+    time being, as fixing this will require invasive upstream
+    code changes.
+  * Fix watch file.
+  * Add myself as uploader.
+
+ -- Jan Christoph Nordholz <hesso@pool.math.tu-berlin.de>  Sat, 23 Jun 2007 22:54:05 +0200
+
+ebtables (2.0.6-3) unstable; urgency=low
+
+  * Applied patch from Andreas Jochens <aj@andaco.de> to make
+    ebtables compile with gcc-4.0 (Closes: #288975).
+
+ -- Jochen Friedrich <jochen@scram.de>  Sat, 29 Jan 2005 22:55:59 +0100
+
+ebtables (2.0.6-2) unstable; urgency=low
+
+  * Fix FTBFS with gcc-3.4 (Closes: #258636).
+    Thanks to Andreas Jochens <aj@andaco.de> for the patch.
+
+ -- Jochen Friedrich <jochen@scram.de>  Wed, 14 Jul 2004 17:21:49 +0200
+
+ebtables (2.0.6-1) unstable; urgency=low
+
+  * New upstream release
+    + <grzes_at_gnu.univ.gda.pl> added arpreply and among modules
+    + <tommy_at_home.tig-grr.com> added limit match
+
+ -- Jochen Friedrich <jochen@scram.de>  Fri,  2 Jan 2004 22:29:45 +0100
+
+ebtables (2.0.5-2) unstable; urgency=low
+
+  * The "I should really check what i upload" revision
+  * New maintainer (Closes: #211788)
+  * Changed build system to cdbs
+  * Bumped policy to 3.6.1
+  * New upstream homepage
+  * Removed conffiles, files in /etc are automatically flagged as
+    conffiles in compat level 4 used by cdbs
+
+ -- Jochen Friedrich <jochen@scram.de>  Mon, 29 Sep 2003 19:46:31 +0200
+
+ebtables (2.0.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jochen Friedrich <jochen@scram.de>  Thu, 25 Sep 2003 23:29:34 +0200
+
+ebtables (2.0.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- David Kimdon <dwhedon@debian.org>  Fri, 23 May 2003 22:00:36 -0700
+
+ebtables (2.0.2-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- David Kimdon <dwhedon@debian.org>  Fri, 17 Jan 2003 20:05:00 -0800

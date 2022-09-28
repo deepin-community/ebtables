@@ -1,0 +1,14 @@
+Description: configure.am patch
+Ebtables libraries are allocated in a specific directory 
+From: Alberto Molina Coballes <alb.molina@gmail.com>
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -13,6 +13,7 @@
+ AC_ARG_VAR([LOCKFILE], [Custom libebtc lockfile path (default: /var/lib/ebtables/lock)])
+ AS_IF([test "x$LOCKFILE" = x], [LOCKFILE="/var/lib/ebtables/lock"])
+ 
++libdir="/usr/lib/ebtables"
+ regular_CFLAGS="-Wall -Wunused"
+ regular_CPPFLAGS=""
+ case "$host" in

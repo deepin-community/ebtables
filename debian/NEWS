@@ -1,0 +1,11 @@
+ebtables (2.0.10.4+snapshot20181205-1) unstable; urgency=medium
+
+  All the ebtables binaries have been moved away from /sbin to
+  /usr/sbin. Some compatibility symlinks have been added for the
+  Buster release cycle, but please make sure your scripts aren't using
+  hardcoded binary paths.
+
+  The plan is to drop the symlinks in Bullseye, the release after
+  Buster.
+
+ -- Alberto Molina Coballes <alb.molina@gmail.com>  Sun,  27 Dec 2018 21:29:00 +0100

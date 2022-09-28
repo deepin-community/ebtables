@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# delete sysvinit script and /etc/default/ebtables when present
+rm_conffile /etc/init.d/ebtables 2.0.10.4+snapshot20181205-2
+rm_conffile /etc/default/ebtables 2.0.10.4+snapshot20181205-2
+
+#DEBHELPER#
